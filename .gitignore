@@ -216,3 +216,28 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# === Enterprise Platform Additions ===
+
+# Local Environment Variables (Crucial to prevent credential leaks)
+.env
+.env.*
+!.env.example
+
+# Local Database & Cache Volumes (Prevents committing raw binary data)
+postgres_data/
+redis_data/
+
+# Infrastructure as Code (Terraform state files)
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# IDE Settings (Keeps your repo clean of local editor configs)
+.vscode/
+.idea/
+
+# Application Logs
+*.log
+logs/
